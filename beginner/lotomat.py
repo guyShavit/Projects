@@ -5,7 +5,7 @@ def menu():
         choose = input("Please choose from the Menu:\n1. Manual filling\n2. auto filling\n3. Exit\n")
         return choose
 
-
+# manual loto
 def manual():
         columns = input("a column cost 3 NIS, how many columns do you want to to fill?\n")
         while not columns.isdigit():
@@ -43,7 +43,7 @@ def manual():
                 print("your numbers are:\n" + str(big_list) + "\nBye Bye")
                 return big_list
 
-
+# automatic lotomat
 def auto():
         columns = input("a column cost 3 NIS, how many columns do you want to to fill?\n")
         while not columns.isdigit():
@@ -81,7 +81,7 @@ def auto():
                 print("your numbers are:\n" + str(big_list) + "\nBye Bye")
                 return big_list
 
-
+# check winning
 def check(big_list, is_double, paid):
     win = []
     for x in range(6):
@@ -117,7 +117,7 @@ def check(big_list, is_double, paid):
     print("the winning numbers are " + str(win))
     print("you have won " + str(total) + " NIS and you paid " + str(paid) + " NIS.\n")
 
-
+# to double or not
 def double(big_list, is_double, columns):
     paid = columns * 6
     choose2 = input("Do you want to check winning? y/n\n")
@@ -126,8 +126,6 @@ def double(big_list, is_double, columns):
     else:
         return big_list
 
-
-# def double():
 
 # main code
 choose = menu()
